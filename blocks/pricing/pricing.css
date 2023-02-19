@@ -1,0 +1,158 @@
+.pricing-container h2, h3 {
+    color: var(--color-neutral-900);
+    font-weight: var(--font-semibold);
+    margin: 0;
+}
+
+.pricing-header-wrapper {
+    text-align: center;
+}
+
+.pricing-header-wrapper h2 {
+    color: var(--color-primary-500);
+    font-size: var(--text-xl);
+}
+
+.pricing-header-wrapper p {
+    color: var(--color-neutral-900);
+    font-size: var(--text-5xl);
+    font-weight: var(--font-bold);
+    margin-top: var(--margin-xs);
+    margin-bottom: 0;
+}
+
+.pricing-header > *:nth-child(2) {
+    color: var(--color-neutral-600);
+    font-size: var(--text-large);
+    margin-top: var(--margin-md);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 42rem;
+}
+
+.pricing {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: var(--margin-xl);
+}
+
+.pricing > div {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0,1fr));
+    row-gap: 2rem;
+    isolation: isolate;
+}
+
+.pricing > div > div {
+    background-color: var(--background-color);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 0;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    outline-offset: 1px;
+    outline: var(--color-neutral-50) solid thin;
+    z-index: 0;
+}
+
+.pricing > div > *:nth-child(2) {
+    order: -1;
+}
+
+@media (min-width: 900px) {
+    .pricing > div {
+        grid-template-columns: repeat(3, minmax(0,1fr));
+    }
+
+    .pricing > div > *:nth-child(odd) {
+        margin-top: var(--margin-lg);
+    }
+
+    .pricing > div > *:nth-child(even) {
+        z-index: 10;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .pricing > div > *:nth-child(1) {
+        border-radius: 1.5rem 0 0 1.5rem;
+    }
+
+    .pricing > div > *:nth-child(2) {
+        order: initial;
+    }
+
+    .pricing > div > *:nth-child(3) {
+        border-radius: 0 1.5rem 1.5rem 0;
+    }
+}
+
+.pricing h3 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-semibold);
+    line-height: 2rem;
+}
+
+.pricing > div > *:nth-child(even) > h3 {
+    color: var(--color-primary-600);
+}
+
+.pricing p {
+    color: var(--color-neutral-600);
+    font-size: var(--text-sm);
+    line-height: 1.5rem;
+    margin-bottom: 0;
+}
+
+.pricing p strong {
+    color: var(--color-neutral-900);
+    font-size: var(--text-4xl);
+    font-weight: var(--font-bold);
+    letter-spacing: -.025rem;
+    padding-right: .250rem;
+}
+
+.pricing ul {
+    margin: var(--margin-lg) 0 0;
+    padding: 0;
+    color: var(--color-neutral-600);
+    font-size: var(--text-sm);
+    list-style-position: inside;
+    line-height: 1.5rem;
+}
+
+.pricing ul li {
+    margin-top: var(--margin-sm);
+    list-style: none;
+}
+
+.pricing ul li::before {
+    content: '✔️';
+    padding-right: .75rem;
+}
+
+.button-container {
+    margin: 0;
+}
+
+.button-container > a.button {
+    display: block;
+    color: var(--color-primary-600);
+    background-color: var(--background-color);
+    margin: var(--margin-lg) 0 0;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    border-width: thin;
+    border-color: var(--color-primary-600);
+}
+
+.pricing > div > *:nth-child(even) > .button-container > a.button {
+    color: var(--background-color);
+    background-color: var(--color-primary-600);
+}
+
+.pricing > div > *:nth-child(even) > .button-container > a.button:hover {
+    background-color: var(--color-primary-500);
+}

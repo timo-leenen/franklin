@@ -11,18 +11,82 @@
  */
 
  :root {
-  /* colors */
-  --link-color: #035fe6;
+   /* Primary colors - used for
+     - primary actions
+     - links
+     - navigation items
+     - icons
+     - accent borders,
+     - emphasized text
+    */
+   --color-primary-50: hsl(186deg 100% 94%);
+   --color-primary-100: hsl(185deg 94% 87%);
+   --color-primary-200: hsl(184deg 80% 74%);
+   --color-primary-300: hsl(184deg 65% 59%);
+   --color-primary-400: hsl(185deg 57% 50%);
+   --color-primary-500: hsl(185deg 62% 45%);
+   --color-primary-600: hsl(184deg 77% 34%);
+   --color-primary-700: hsl(185deg 81% 29%);
+   --color-primary-800: hsl(185deg 84% 25%);
+   --color-primary-900: hsl(184deg 91% 17%);
+
+   /* Neutrals - used for
+     - text
+     - backgrounds
+     - borders
+     - secondary buttons and links
+    */
+   --color-neutral-50: hsl(210deg 36% 96%);
+   --color-neutral-100: hsl(212deg 33% 89%);
+   --color-neutral-200: hsl(210deg 31% 80%);
+   --color-neutral-300: hsl(211deg 27% 70%);
+   --color-neutral-400: hsl(209deg 23% 60%);
+   --color-neutral-500: hsl(210deg 22% 49%);
+   --color-neutral-600: hsl(209deg 28% 39%);
+   --color-neutral-700: hsl(209deg 34% 30%);
+   --color-neutral-800: hsl(211deg 39% 23%);
+   --color-neutral-900: hsl(209deg 61% 16%);
+
+   /* Typography - Font Sizes */
+   --text-xs: 0.75rem;
+   --text-sm: 0.875rem;
+   --text-base: 1rem;
+   --text-large: 1.125rem;
+   --text-xl: 1.25rem;
+   --text-2xl: 1.5rem;
+   --text-3xl: 1.875rem;
+   --text-4xl: 2.25rem;
+   --text-5xl: 3rem;
+
+   /* Typography - Font Weights */
+   --font-semibold: 600;
+   --font-bold: 700;
+
+   /* Typography - Fonts */
+   --body-font-family: 'helvetica neue', helvetica, ubuntu, roboto, noto, sans-serif;
+   --heading-font-family: var(--body-font-family);
+   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
+
+   /* Margins */
+   --margin-xs: 0.5rem;
+   --margin-sm: 0.75rem;
+   --margin-md: 1.5rem;
+   --margin-lg: 2rem;
+   --margin-xl: 4rem;
+
+   /* Breakpoints */
+   --screen-sm: 600px;
+   --screen-md: 900px;
+   --screen-lg: 1200px;
+   --screen-xl: 1800px;
+
+   /* Other, to be categorized */
+   --link-color: #035fe6;
   --link-hover-color: #136ff6;
   --background-color: #fff;
   --overlay-background-color: #eee;
   --highlight-background-color: #ccc;
-  --text-color: #000;
-
-  /* fonts */
-  --body-font-family: 'helvetica neue', helvetica, ubuntu, roboto, noto, sans-serif;
-  --heading-font-family: var(--body-font-family);
-  --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
+  --text-color: var(--color-neutral-900);
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -40,6 +104,11 @@
   /* nav height */
   --nav-height: 64px;
 
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
