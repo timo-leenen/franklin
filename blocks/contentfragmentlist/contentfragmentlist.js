@@ -77,10 +77,10 @@ export default async function decorate(block) {
             <img src="${item.image.url}" width="${item.image.width}" height="${item.image.height}" alt="${item.title}" type="${item.image.mimeType}" itemprop="primaryImage" itemtype="image" loading="lazy">
           </picture>
           <div class="cf-item-wrapper__inner">
-            <div class="cf-item__title">${item.title}</div>
+            <div class="cf-item__title" itemprop="title" itemtype="text">${item.title}</div>
             <div class="cf-item__details">
-              <p class="cf-item__length">${item.tripLength}</p>
-              <p class="cf-item__price">${item.price}</p>
+              <p class="cf-item__length" itemprop="tripLength" itemtype="text" >${item.tripLength}</p>
+              <p class="cf-item__price" itemprop="price" itemtype="text">${item.price}</p>
             </div>
           </div>
         </div>
